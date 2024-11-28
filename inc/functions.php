@@ -1,7 +1,7 @@
 <?php
 
-//このファイル内にはデータベース名、データベースに登録されたユーザー名、それに対応するパスワード
-//が書き込まれていない。今後自分でデータベースを作成して登録したユーザー名、パスワードを
+//このファイル内にはデータベースのテーブル名、テーブルに登録されたユーザー名、それに対応するパスワード
+//が書き込まれていない。今後自分でテーブルを作成して登録したユーザー名、パスワードを
 //それぞれ書き込んでから使って。
 
 
@@ -27,8 +27,8 @@ function db_open(): PDO
         PDO::MYSQL_ATTR_MULTI_STATEMENTS => false, //マルチクエリを無効
     ];
     //PDOオブジェクトの新規作成
-    //データベース名を入力すること。　例： dename=sample_db;
-    $dbh = new PDO('mysql:host=localhost;dbname=自分で作ったデータベースの名前', $user, $password, $opt);
+    //テーブル名を入力すること。　例： dename=sample_db;
+    $dbh = new PDO('mysql:host=localhost;dbname=自分で作ったテーブルの名前', $user, $password, $opt);
 
     return $dbh;
 }
