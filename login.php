@@ -44,6 +44,8 @@ try {
     if (password_verify($_POST['password'], $result['password'])) {
         session_regenerate_id(true); //セッションIDを再生成する
         $_SESSION['login'] = true; //ログイン状態にする
+        $_SESSION['this_user'] = $_POST['username'];
+        echo "ログインします";
         header("Location: index.php"); //index.phpに移動
     } else {
         echo 'ログインに失敗しました。'; //パスワードが一致しないので終了
