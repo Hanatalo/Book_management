@@ -1,8 +1,5 @@
 <?php
 //このファイルはユーザーに追加するデータを入力させて、add.phpに値を渡す
-
-
-
 session_start();
 $token = bin2hex(random_bytes(20)); //ランダムなバイト列（２０）を16進数に変換する
 $_SESSION['token'] = $token;
